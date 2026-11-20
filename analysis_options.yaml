@@ -1,0 +1,12 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude:
+    - build/**
+    - android/**
+    - web/**
+  errors:
+    # O Flutter 3.50 marca `package:flutter/material.dart` como depreciado em
+    # favor de `package:material_ui`, que ainda não existe no SDK instalado.
+    # Mantemos o import estável até o pacote ser publicado.
+    deprecated_member_use: ignore
